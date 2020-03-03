@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="" method="POST" novalidate>
+    {{form.hidden_tag()}}
+    <fieldset>
+        <legend>New Account Creation</legend>
+        <p>
+            {{form.username.label}}{{form.username(size=32,autofocus=True)}}
+            {% for error in form.username.errors %}
+                <span style="color:red;">{{error}}</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{form.acc_no.label}}{{form.acc_no(size=32,autofocus=True)}}
+            {% for error in form.acc_no.errors %}
+                <span style="color:red;">{{error}}</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{form.customer_type.label}}{{form.customer_type(size=32)}}
+            {% for error in form.customer_type.errors %}
+                <span style="color:red;">{{error}}</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{form.balance.label}}{{form.balance(size=32)}}
+            {% for error in form.balance.errors %}
+                <span style="color:red;">{{error}}</span>
+            {% endfor %}
+        </p>
+        <p><a href="{{url_for('home')}}">Back to Home</a></p>
+        <p>{{form.submit()}}</p>
+   </fieldset>
+</form>
+{% endblock %}
+            

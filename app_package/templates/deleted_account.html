@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<fieldset>
+<legend>Closed Accounts</legend>
+<table>
+    <tr>
+        <th>Acc_no</th>
+        <th>Name</th>
+        <th>Customer_type</th>
+   </tr>
+   {% for customer in customers %}
+        <tr>
+            <td>{{customer.acc_no}}</td>
+            <td>{{customer.username}}</td>
+            <td>{{customer.customer_type}}</td>
+        </tr>
+    {% endfor %}
+</table>
+</fieldset>
+<p><a href="{{url_for('home')}}">Back to home</a></p>
+{% endblock %}

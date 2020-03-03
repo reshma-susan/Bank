@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>Welcome </title>
+<link rel="stylesheet" type="text/css" href="/static/css/login.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Home Page</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{url_for('new_account')}}">New Account</a></li>
+      <li><a href="{{url_for('display_customers')}}">Display Customers</a></li>
+     <li><a href="{{url_for('deposit')}}">Deposit</a></li>
+     <li><a href="{{url_for('withdraw')}}">Withdrawal</a></li>
+     <li><a href="{{url_for('balance')}}">Check Balance</a></li>
+     <li><a href="{{url_for('delete')}}">Close Account</a></li>
+     <li><a href="{{url_for('deleted_account')}}">View Closed Accounts</a></li>
+     <li><a href="{{url_for('logout')}}">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="{{url_for('confirm')}}" method="POST" novalidate>
+   
+    <fieldset>
+        <legend>confirm</legend>
+        <table>
+    <tr>
+        <th>Acc_no</th>
+        <th>Balance</th>
+       
+    </tr>
+    {% for customer in customers %}
+    <tr>
+        <td>{{f2.acc_no}}</td>
+        
+        <td>{{customer.name}}</td>
+        <td>{{customer.balance}}</td>
+      
+    </tr>
+    {% endfor %}
+</table>   
+        
+        <p>
+        {{f2.submit()}}
+        </p>
+    </fieldset>
+    <p><a href="{{url_for('home')}}">Back</a></p>
+     
+</form>
+{% endblock %}

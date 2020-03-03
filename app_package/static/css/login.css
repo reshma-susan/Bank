@@ -1,0 +1,16 @@
+body{
+    width:40%;
+    margin-left:auto;
+    margin-right:auto;
+    background-image:url("../images/image1.jpg");
+    background-size: cover;
+    color:black;
+    font-family: verdana;
+    font-size: 20px;
+   
+}
+a{
+    color:red;
+    font-family: verdana;
+    font-size: 20px;
+}
